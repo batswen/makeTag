@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>cw</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="page"></div>
+
+    <script src="main.js"></script>
+    <script>
+        const page = document.getElementById("page")
+        const WIDTH = 10
+        let html = ""
+
+        for (let j = 0; j < WIDTH; j++) {
+            html += div(function() {
+                let html = ""
+                for (let i = 0; i < WIDTH; i++) {
+                    html += span({id: i + j * WIDTH}, i)
+                }
+                return html
+            })
+        }
+        page.innerHTML = html
+    </script>
+</body>
+</html>
