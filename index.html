@@ -9,7 +9,7 @@
 <body>
     <div id="page"></div>
 
-    <script src="main.js"></script>
+    <script src="makeTag.js"></script>
     <script>
         const page = document.getElementById("page")
         const WIDTH = 10
@@ -25,6 +25,18 @@
             })
         }
         page.innerHTML = html
+
+        console.log(div("Testtest"))
+        console.log(div(span("span1"), span("span2")))
+        console.log(li(function() {
+            let html = ""
+            for (let i = 0; i < 10; i++) {
+                html += li({id: "" + i, style: "listItem"}, "ListItem: " + i)
+            }
+            return html
+        }))
+        console.log(div({ class: "blueText" }, "Testtest"))
+        console.log(div({ class: ["bold", "yellow", "xp"], onclick: "myfunc()" }, div("Testtest")))
     </script>
 </body>
 </html>

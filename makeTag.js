@@ -17,8 +17,10 @@ function makeTagFunction(tag) {
 		if (attrs !== null) {
 			for (let attr in attrs) {
                 html += " " + attr + '="'
+                // a string or
 				if (typeof attrs[attr] === "string") {
 					 html += attrs[attr]
+                // an array of strings
 				} else {
 					for (let i = 0; i < attrs[attr].length; i++) {
 						if (i > 0) {
