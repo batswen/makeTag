@@ -1,9 +1,9 @@
 function makeTagFunction(tag) {
-    let endtag = ["img","br","hr","link","meta","input","rect","line"].indexOf(tag) === -1 ? "</" + tag + ">" : ""
+    let endtag = ["img","br","hr","link","meta","input"].indexOf(tag) === -1 ? "</" + tag + ">" : ""
 	return function() {
 		let html, attrs = null, args
 
-		// add starting tag
+		// add start tag
 		html = "<" + tag
 		// change arguments object to an array
 		args = Array.prototype.slice.call(arguments)
