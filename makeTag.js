@@ -8,7 +8,7 @@ function makeTagFunction(tag) {
 		// change arguments object to an array
 		args = Array.prototype.slice.call(arguments)
 
-		// attributes gives?
+		// attributes given?
 		if (typeof args[0] === "object") {
 			attrs = args[0]
 			args.shift()
