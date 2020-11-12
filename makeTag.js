@@ -38,11 +38,7 @@ function makeTagFunction(tag) {
 
 		// process string or all callbacks
 		while (args.length) {
-			if (typeof args[0] === "function") {
-				html += args[0]()
-			} else {
-				html += args[0]
-			}
+			html += typeof args[0] === "function" ? args[0]() : args[0]
 			args.shift()
 		}
     	// add closing tag
